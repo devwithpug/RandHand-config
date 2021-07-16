@@ -1,0 +1,41 @@
+spring:
+  jpa:
+    properties:
+      format_sql: true
+      show_sql: true
+      jdbc.lob.non_contextual_creation: true
+    generate-ddl: true
+  rabbitmq:
+    host: rabbitmq
+    port: 5672
+    username: randhand
+    password: {encrypt}AQBl10mSrlqIWxRZFIJLsa+CZKfsOsRjra63oU6Tqq5kYS+bIIWTxxBcNv1Kqg95f3ugEA3ei4bMR89vFZ3oLHav2BWw2cZT7LZNNAjWQksWzRQJfptqwMeqkaz82z/xcTIzfqRI43DQSz/BeV0EHn0Zo9iMLUNH/jSlnuEGp5t/L0XtkKlNtnHNa1lW4waxfLcwP86eyXMYi2IGG87b+1MBtYaJVfC8+mzUjHV2YaTe292t1csSC1E35e2zYvdB73TWnjsxOsjUU3uV0/e9smZF1Q99ULiXQ6oaVrjlhwm7I7gTriXWthIz6lPP+vu31kR8kUGFGuAv8nDvsq9g/yB5kMhrgsVk+gOKNMfQ0lvV667ZK+wARyKRVWD+Ryukcgs=
+#    hibernate:
+#      ddl-auto: validate
+#logging:
+#  level:
+#    root: debug
+
+eureka:
+  instance:
+    instance-id: ${spring.cloud.client.hostname}:${spring.application.instance_id:${random.value}}
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://discovery-service:8761/eureka
+
+kafka:
+  topic:
+    queue: queue-topic
+    match: match-topic
+    chat: chat-topic
+  address: {encrypt}AQBRM86ruc8KkHysg156H4zUJ4zaYP39kShnIizwLW7lEUitdb4p6MEqPPV/i4DeVW3FFqj7DL36/syBQ06Z9z1lo0oSijZb9SuHIBI2YmvkRsMvT4e+hP+Gkume85WbVBUBwBblM3BUXCVmOfqNGCPRDQP3ZHk0cZHWYMH13OTOe6WsIazGOyHE5EK8hRT+c7pCpn2F/IGoJABcnOLwVdZsVB9YSN2qQZTxCH68OflP+3osOUoqMhe52TxNrYilIPBmTvX65i1BcdxyWZXgW3wzXsRgyMsFjYWDZEenVaICSR9kKG5j5FKz+bcmcSeG/mf1bfh/xQp67xEQmxcMmXJ/slp3FOluxOmDmSwurEBGugPRaCIyotSxqnTL252k6dQ4xTbzj52O2Wn8e12XqLh/
+  group_id:
+    match: match-group
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, health, beans, busrefresh
