@@ -10,32 +10,23 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: user-service
-          uri: lb://USER-SERVICE
+        - id: chat-service
+          uri: lb://CHAT-SERVICE
           predicates:
-            - Path=/user-service/login
+            - Path=/chat-service/login
             - Method=POST
           filters:
             - RemoveRequestHeader=Cookie
-            - RewritePath=/user-service/(?<segment>.*), /$\{segment}
+            - RewritePath=/chat-service/(?<segment>.*), /$\{segment}
 
-        - id: user-service
-          uri: lb://USER-SERVICE
+        - id: chat-service
+          uri: lb://CHAT-SERVICE
           predicates:
-            - Path=/user-service/users
+            - Path=/chat-service/users
             - Method=POST
           filters:
             - RemoveRequestHeader=Cookie
-            - RewritePath=/user-service/(?<segment>.*), /$\{segment}
-
-        - id: user-service
-          uri: lb://USER-SERVICE
-          predicates:
-            - Path=/user-service/**
-          filters:
-            - RemoveRequestHeader=Cookie
-            - RewritePath=/user-service/(?<segment>.*), /$\{segment}
-            - AuthorizationHeaderFilter
+            - RewritePath=/chat-service/(?<segment>.*), /$\{segment}
 
         - id: chat-service
           uri: lb://CHAT-SERVICE
@@ -44,6 +35,7 @@ spring:
           filters:
             - RemoveRequestHeader=Cookie
             - RewritePath=/chat-service/(?<segment>.*), /$\{segment}
+            - AuthorizationHeaderFilter
 
         - id: gesture-service
           uri: lb://GESTURE-SERVICE
