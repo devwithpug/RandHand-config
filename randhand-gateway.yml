@@ -2,10 +2,6 @@ eureka:
   client:
     eureka-service-url-poll-interval-seconds: 30
 
-logging:
-  level:
-    com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver: WARN
-
 spring:
   cloud:
     gateway:

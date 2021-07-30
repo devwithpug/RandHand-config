@@ -1,3 +1,8 @@
+logging:
+  level:
+    com.netflix.discovery.DiscoveryClient: WARN
+    com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver: WARN
+
 spring:
   jpa:
     properties:
@@ -26,6 +31,7 @@ eureka:
       defaultZone: http://127.0.0.1:8761/eureka
     registry-fetch-interval-seconds: 15
     disable-delta: true
+    region: ap-northeast-2
 
 kafka:
   topic:
