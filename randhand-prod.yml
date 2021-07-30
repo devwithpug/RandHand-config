@@ -24,6 +24,8 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://eureka-server:8761/eureka
+    registry-fetch-interval-seconds: 15
+    disable-delta: true
 
 kafka:
   topic:
