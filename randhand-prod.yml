@@ -42,6 +42,10 @@ kafka:
   group_id:
     match: match-group
 
+randhand:
+  host_ip: 172.18.0.1
+  warm_up: true
+
 management:
   endpoints:
     web:
