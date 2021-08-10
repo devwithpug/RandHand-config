@@ -39,7 +39,6 @@ eureka:
 
 kafka:
   topic:
-    queue: queue-topic
     match: match-topic
     chat: chat-topic
   address: 127.0.0.1:9092
