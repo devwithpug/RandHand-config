@@ -1,7 +1,7 @@
-# logging:
-#   level:
-#     com.netflix.discovery.DiscoveryClient: WARN
-#     com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver: WARN
+logging:
+  level:
+    com.amazonaws.util.EC2MetadataUtils: ERROR
+    com.amazonaws.internal.InstanceMetadataServiceResourceFetcher: ERROR
 
 spring:
   servlet:
@@ -19,23 +19,11 @@ spring:
     port: 5672
     username: guest
     password: guest
-#    hibernate:
-#      ddl-auto: validate
-#logging:
-#  level:
-#    root: debug
 
 eureka:
-  # instance:
-  #   instance-id: ${spring.cloud.client.hostname}:${spring.application.instance_id:${random.value}}
   client:
     register-with-eureka: false
     fetch-registry: false
-    # service-url:
-    #   defaultZone: http://127.0.0.1:8761/eureka
-    # registry-fetch-interval-seconds: 15
-    # disable-delta: true
-    # region: ap-northeast-2
 
 kafka:
   topic:

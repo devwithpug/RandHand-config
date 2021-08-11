@@ -15,11 +15,6 @@ spring:
     port: 5672
     username: guest
     password: guest
-#    hibernate:
-#      ddl-auto: validate
-#logging:
-#  level:
-#    root: debug
 
 eureka:
   instance:

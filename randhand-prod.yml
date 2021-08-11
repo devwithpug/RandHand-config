@@ -15,11 +15,6 @@ spring:
     port: 5672
     username: randhand
     password: "{cipher}AQBl10mSrlqIWxRZFIJLsa+CZKfsOsRjra63oU6Tqq5kYS+bIIWTxxBcNv1Kqg95f3ugEA3ei4bMR89vFZ3oLHav2BWw2cZT7LZNNAjWQksWzRQJfptqwMeqkaz82z/xcTIzfqRI43DQSz/BeV0EHn0Zo9iMLUNH/jSlnuEGp5t/L0XtkKlNtnHNa1lW4waxfLcwP86eyXMYi2IGG87b+1MBtYaJVfC8+mzUjHV2YaTe292t1csSC1E35e2zYvdB73TWnjsxOsjUU3uV0/e9smZF1Q99ULiXQ6oaVrjlhwm7I7gTriXWthIz6lPP+vu31kR8kUGFGuAv8nDvsq9g/yB5kMhrgsVk+gOKNMfQ0lvV667ZK+wARyKRVWD+Ryukcgs="
-#    hibernate:
-#      ddl-auto: validate
-#logging:
-#  level:
-#    root: debug
 
 eureka:
   instance:
