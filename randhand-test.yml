@@ -12,7 +12,6 @@ spring:
     generate-ddl: true
     properties:
       hibernate:
-        show_sql: true
         format_sql: true
   rabbitmq:
     host: 127.0.0.1
