@@ -9,11 +9,11 @@ spring:
       max-file-size: 10MB
       max-request-size: 10MB
   jpa:
-    properties:
-      format_sql: true
-      show_sql: true
-      jdbc.lob.non_contextual_creation: true
     generate-ddl: true
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
   rabbitmq:
     host: 127.0.0.1
     port: 5672
