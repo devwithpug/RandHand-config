@@ -54,3 +54,7 @@ spring:
           args:
             preLogger: true
             postLogger: true
+
+      httpclient:
+        websocket:
+          max-frame-payload-length: 3072000
