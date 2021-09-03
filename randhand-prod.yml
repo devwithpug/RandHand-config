@@ -39,6 +39,7 @@ kafka:
 randhand:
   host_ip: 172.18.0.1
   warm_up: true
+  firebase_path: "{cipher}AQAqqA8tAL+YtVzGik40oXR7MbGzuXiGUpZdz5pOlhGJbx2Mvlvqms0zO3/kSNr19tTu/Veumx+cwCZk1WwCsSUIoKQAMSW0VgaUbcaRav/4klO/XotMYHgE3Vtl2vnNI2xnr2l/Q8eqnaHyUTwGVbdiDAcZGjPyW6vDL1rjzOrHNED1vmnEHKVrWG/UCeKICZQ2UyJhJf90e+9W8Vyar8kmvetOOA0/aj7bzkNzWQcqb2ZIWCPCI07zqMw2+xcLrhaZDlQ257NkglbhrGmfCUuxKD5WBr761zHdgXF3wWJu/C/kt+fnQGfrrf0V5vONayCzt8WC3Vf2tq9T7g5jRGlA8Aze/EgGwboZhb2Ew0ci+0CcVtKeLpiREyGdN72F2xhkTawAqYm7G0tc7mDM4Ccd"
 
 management:
   endpoints:
