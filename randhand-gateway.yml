@@ -9,6 +9,15 @@ spring:
         - id: chat-service
           uri: lb://CHAT-SERVICE
           predicates:
+            - Path=/chat-service/health
+            - Method=GET
+          filters:
+            - RemoveRequestHeader=Cookie
+            - RewritePath=/chat-service/(?<segment>.*), /$\{segment}
+
+        - id: chat-service
+          uri: lb://CHAT-SERVICE
+          predicates:
             - Path=/chat-service/login
             - Method=POST
           filters:
